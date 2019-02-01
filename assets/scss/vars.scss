@@ -1,0 +1,102 @@
+// ==================================================================
+// TLVD Variables / Theme / Sizes
+//
+
+// Base Size 18px
+$base:                  16px !default;
+$base-m:                18px !default;
+
+$golden:                1.618033 !default;
+$gap:                   2rem;
+
+// Media
+$sm:                    320px;
+$md:                    480px;
+$lg:                    768px;
+$xl:                    992px;
+$xx:                    1024px;
+// $md:                  992px;
+// $lg:                  1200px;
+
+
+// ========================================================================
+// TLVD Variables / Theme / Colors
+//
+
+$brand:               #ECE7DB !default; // Deep Blue
+$brand-alt:           #A9A69B; // Deep Blue
+
+$background:          #F9F4EB;
+$background-alt:      #1D1F2C;
+
+$black:               #000000 !default;
+$white:               #FFFFFF !default;
+$red:                 #FF2626;
+
+$muted:               #354879;
+$muted-alt:           #424F71;
+
+// $background:          $white;
+// $muted:               #777;
+
+// ========================================================================
+// TLVD Variables / Theme / Typography
+//
+
+// $font:                -apple-system, 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$font:                'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+// $font-alt:            'Montserrat', sans-serif !default;
+
+$light: 300;
+$bold: 900;
+
+// $line-height:         1.414 !default;       // 24px
+$line-height:         $golden;       // 24px
+
+
+
+$h1:                  3.00000rem !default;  // 54px
+$h2:                  1.66666rem !default;  // 21px
+
+$h3:                  1.22222rem !default;  // 36px
+$h4:                  1.11111rem !default;  // 30px
+$h5:                  0.99999rem !default;  // 24px
+$h6:                  0.88888rem !default;  // 21px
+$h7:                  0.83333rem !default;  // 15px
+$h8:                  0.77777rem !default;  // 14px
+$h9:                  0.66666rem !default;  // 12px
+$h9:                  0.55555rem !default;  // 10px
+
+// ========================================================================
+// TLVD Variables / Theme / Controls
+//
+
+// Set Golden Ratio
+
+// ========================================================================
+// TLVD Variables / Theme / Form Control
+//
+
+$active-font-size: $h7 !default;
+$active-top: -$base-m !default;
+
+// Margin & Paddings
+$gap: $h2 * 1.5 !default;
+$spacer: $h2 / 8 !default;
+$fieldset-margin: 0 0 $gap * 2 !default;
+$checkbox-gap: $h2 * 2 !default;
+$checkbox-top: 0 !default;
+$radio-margin: $h2 / -4 !default;
+
+// Colors
+$input-color: $black !default;
+$border-color: $brand !default;
+$label-color: darken($border-color, 100%) !default;
+$active-color: darken($border-color, 10%) !default;
+$focus-color: $brand !default;
+$error-color: $brand !default;
+
+// Animation
+$transition-speed: 0.2s !default;
+
+

@@ -1,0 +1,326 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: $font;
+  margin: 0;
+  font-weight: 400;
+  line-height: $line-height;
+  color: $brand;
+  background: darken($background, 5);
+  // @include gradient($background, $background-alt);
+  overflow-x: hidden;
+  font-size: $base;
+}
+
+article,
+aside,
+dialog,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block;
+}
+
+p,
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1.618033rem;
+  text-align: left;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
+
+li {
+  padding-bottom: 0.4rem;
+}
+
+ol li {
+  padding-left: $gap / $golden / $golden;
+}
+
+figure {
+  margin: 0;
+  margin-top: 4rem;
+}
+
+figcaption {
+  display: inline-block;
+  // text-align: left;
+  font-size: $h7;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  // padding-top: 1rem;
+  // padding-bottom: 1rem;
+  // border-top: 0.5px solid rgba($black, 0.13);
+  // border-bottom: 0.5px solid rgba($black, 0.13);
+  span {
+    // font-family: $font-alt;
+    font-size: $h8;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+p + h2,
+p + h3 {
+  margin-top: 4rem;
+}
+
+// ul {
+//   list-style: none;
+//   padding-left: $gap / $golden;
+// }
+
+hr {
+  border: 0.5px solid rgba($black, 0.07);
+  // margin: 40px 0;
+}
+
+[tabindex='-1']:focus {
+  outline: none !important;
+}
+
+::selection {
+  color: $brand;
+  background: rgba($brand, 0.2); /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  color: $brand;
+  background: rgba($brand, 0.2); /* Gecko Browsers */
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+////////////////////////////////////////////////////////////
+// Links
+//
+
+a {
+  text-decoration: none;
+  color: $brand;
+  cursor: pointer;
+  transition: color 0.25s ease;
+  &:hover {
+    color: $black;
+  }
+}
+
+////////////////////////////////////////////////////////////
+// Main Background Image / Poster
+// Includes MS hack for responsive cover effect
+// Usage: @extend .background-image
+
+.background-image {
+  background: url('~assets/images/azrieli.jpg') no-repeat center center fixed;
+  background-size: cover;
+  z-index: -1;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
+}
+
+////////////////////////////////////////////////////////////
+// Table of contents
+//
+
+// ol {
+//   text-align: left;
+//   padding-left: 1rem;
+//   margin-bottom: 4rem;
+//   @include tablet {
+//     padding-left: 3rem;
+//   }
+// }
+
+// .toc ol {
+//   // text-align: left;
+//   list-style-type: none;
+//   counter-reset: toc1;
+//   // padding-left: 1rem;
+//   // margin-bottom: 4rem;
+//   @include tablet {
+//     // padding-left: 3rem;
+//   }
+// }
+
+// .toc ol li::before {
+//   content: counter(toc1) '. ';
+//   counter-increment: toc1;
+//   color: lighten($black, 0);
+//   margin-right: 0.5rem;
+// }
+
+// .toc ol li ol {
+//   counter-reset: toc2;
+//   margin-top: 0.5rem;
+// }
+
+// .toc ol li ol li::before {
+//   content: counter(toc1) ' .' counter(toc2) ' ';
+//   counter-increment: toc2;
+// }
+
+// .toc ol li ol li ol {
+//   counter-reset: toc3;
+// }
+
+// .toc ol li ol li ol li::before {
+//   content: counter(toc1) ' .' counter(toc2) ' .' counter(toc3) ' ';
+//   counter-increment: toc3;
+// }
+
+// .toc li {
+//   display: table;
+//   cursor: pointer; 
+// }
+
+// .toc li::before {
+//   cursor: default;
+// }
+
+////////////////////////////////////////////////////////////
+// References and Footnotes
+//
+
+// .legal,
+// hr {
+//   font-size: $h5;
+//   margin-top: 3rem;
+//   margin-bottom: 3rem;
+// }
+
+// .footnotes {
+//   text-align: left;
+//   li {
+//     font-size: $h6;
+//     // line-height: 0.8rem;
+//   }
+// }
+
+////////////////////////////////////////////////////////////
+// Progress Bar
+//
+
+// .nuxt-progress {
+//   position: fixed;
+//   top: 0px;
+//   left: 0px;
+//   right: 0px;
+//   height: 10px;
+//   width: 0%;
+//   opacity: 1;
+//   transition: width 0.1s, opacity 0.4s;
+//   background-color: red;
+//   z-index: 999999;
+//   &::after {
+//     content: "";
+//     display: block;
+//     width: 28px;
+//     height: 28px;
+//     margin-top: 20px;
+//     float: right;
+//     background-image: url('~assets/images/bee-logo-progress-bar.png');
+//     background-repeat: no-repeat;
+//     background-position: 100% 100%;
+//     background-size: 28px;
+//   }
+// }
+// .nuxt-progress.nuxt-progress-notransition {
+//   transition: none;
+// }
+// .nuxt-progress-failed {
+//   background-color: #555;
+// }
+
+////////////////////////////////////////////////////////////
+// Bee Fade Transition between Routes
+//
+
+// .fade-enter-active,
+// .fade-leave-active {
+//   transition-property: opacity;
+//   transition-timing-function: ease-out;
+//   transition-duration: 0.4s;
+// }
+
+// .fade-enter-active {
+//   transition-timing-function: ease-out;
+//   transition-delay: 0.4s;
+// }
+
+// .fade-enter,
+// .fade-leave-active {
+//   opacity: 0;
+// }
+
+// .page-enter-active,
+// .page-leave-active {
+//   transition: opacity 0.33s ease-out;
+// }
+
+// .page-enter,
+// .page-leave-active {
+//   opacity: 0;
+//   // transform-origin: 50% 50%;
+// }
+
+// // Layout transitions
+// .layout-enter-active,
+// .layout-leave-active {
+//   transition: opacity 0.33s ease-out;
+// }
+
+// .layout-enter,
+// .layout-leave-active {
+//   opacity: 0;
+// }
+
+// Layout transitions
+// .fade-enter-active,
+// .fade-leave-active {
+//   transition: opacity 2.33s ease-out;
+// }
+
+// .fade-enter,
+// .fade-leave-active {
+//   opacity: 0;
+// }
+
+// .fade-enter-active,
+// .fade-enter {
+//   transition-delay: 0;
+// }
+
