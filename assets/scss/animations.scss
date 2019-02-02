@@ -1,0 +1,104 @@
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+// Global Animations
+//
+
+//////////////////////////////////////////////////////////
+// fadeShape
+//
+
+.fadeShape-enter-active {
+  @include animation(animateShape, 12s, 0s, linear, 1, forwards, forwards);
+  opacity: 1;
+}
+.fadeShape-leave-active {
+  @include animation(animateShape, 0.222s, 0s, linear, 1, backwards, hidden);
+  opacity: 1;
+}
+.fadeShape-enter,
+.fadeShape-leave-to {
+  opacity: 0;
+}
+
+//////////////////////////////////////////////////////////
+// fade
+//
+
+.fade-enter-active,
+.fade-leave-active {
+  opacity: 1;
+  transition: opacity 3.666s cubic-bezier(0.62, 0.03, 0.11, 0.96);
+  // right: 0%;
+  // width: 100%;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+//////////////////////////////////////////////////////////
+// fadeSlowwer
+//
+
+.fadeSlower-enter-active,
+.fadeSlower-leave-active {
+  opacity: 1;
+  transition: opacity 3.666s cubic-bezier(0.62, 0.03, 0.11, 0.96);
+  transition-delay: 1.666s;
+  // right: 0%;
+  // width: 100%;
+}
+.fadeSlower-enter,
+.fadeSlower-leave-to {
+  opacity: 0;
+}
+
+//////////////////////////////////////////////////////////
+// showContent
+//
+.showContent-enter-active,
+.showContent-leave-active {
+  transition: right 0.666s cubic-bezier(0.62, 0.03, 0.11, 0.96);
+  // right: 0%;
+  // width: 100%;
+}
+.showContent-enter,
+.showContent-leave-to {
+  right: -100%;
+  @include lg {
+    right: -62%;
+  }
+  @include xl {
+    right: -50%;
+  }
+}
+
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+// Keyframes
+//
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animateShape {
+  0% {
+    opacity: 0;
+    stroke-dasharray: 1620;
+    stroke-dashoffset: 1620;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dasharray: 1620;
+    stroke-dashoffset: 0;
+  }
+}

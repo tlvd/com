@@ -45,10 +45,11 @@ export default {
   cursor: pointer;
   z-index: 1000;
   overflow: hidden;
+  // transition: right 0.666s cubic-bezier(0.62, 0.03, 0.11, 0.96);
   svg {
     position: absolute;
     top: 12px;
-    transition: right 0.999s cubic-bezier(0.62, 0.03, 0.11, 0.96);
+    transition: right 0.666s cubic-bezier(0.62, 0.03, 0.11, 0.96);
     &.open {
       right: 10px;
     }
@@ -58,6 +59,7 @@ export default {
     }
   }
   &.animate {
+    // right: calc(50% - 55px);
     svg.open {
       right: 80px;
     }

@@ -1,23 +1,41 @@
 <template>
+  <transition name="showContent" mode="out-in">
     <section
-      :class="{animate: showContent}"
+      v-if="showContent"
       class="content"
     >
-
-      <div class="circle-line" />
-
-      <app-title
-        title="Tel Aviv Digital"
-      />
-
-      <!-- <app-title -->
-        <!-- class="" -->
-        <!-- title="Our goal is to get the world talking, staring, blogging and most importantly, remembering your brand." -->
+      <!-- <transition name="fade" mode="out-in" appear> -->
+      <!-- <div -->
+      <!-- v-if="circle" -->
+      <!-- class="circle-line" -->
       <!-- /> -->
+      <!-- </transition> -->
 
-      <h2>
-        Our goal is to get the world talking, staring, blogging and most importantly, remembering your brand.
-      </h2>
+      <transition name="fadeShape" mode="out-in" appear>
+        <div
+          v-if="circle"
+          class="shape-container"
+        >
+          <shape-t />
+        </div>
+      </transition>
+
+      <!-- <transition name="fade" mode="out-in" appear> -->
+      <!-- <div class="triangle-line" /> -->
+      <!-- </transition> -->
+
+      <transition name="fadeSlower" mode="out-in" appear>
+        <app-title
+          v-if="tlvd"
+          title="Tel Aviv Digital"
+        />
+      </transition>
+
+      <transition name="fade" mode="out-in" appear>
+        <h2 v-if="slide1">
+          Our goal is to get the world talking, staring, interacting and most importantly, remembering <span>your brand</span>.
+        </h2>
+      </transition>
 
       <h2>
         <!-- Tel Aviv Digital is a creative communications agency, which specializes in developing branded advertising and interactive experiences. -->
@@ -33,101 +51,119 @@
         </p>
       </div>
     </section>
+  </transition>
 </template>
 
 <script>
 import AppTitle from '~/components/AppTitle'
+import ShapeT from '~/components/icons/ShapeT'
 
 export default {
   components: {
-    AppTitle
+    AppTitle,
+    ShapeT
   },
   props: {
     showContent: {
       type: Boolean,
       default: false
     }
+  },
+  data() {
+    return {
+      tlvd: false,
+      slide1: false,
+      slide2: false,
+      slide3: false,
+      circle: false
+    }
+  },
+  mounted() {
+    this.circle = true
+    this.slide1 = true
+    this.tlvd = true
+    // setTimeout(() => (this.init = false), 6800)
   }
 }
 </script>
 
 <style scoped lang="scss">
-// .circle-line {
-//   width: 28%;
-//   height: 28%;
-//   background: $red;
-// }
 .content {
-  // @extend .flex;
+  right: 0;
   position: absolute;
-  right: -100%;
+  transform: translateX(0%);
   width: 100%;
   height: 100%;
   background: $black;
   background: $red;
-  padding: 100px 6%;
+  // padding: 100px 6%;
   z-index: 5;
-  transition: right 0.666s cubic-bezier(0.62, 0.03, 0.11, 0.96);
-  &.animate {
-    right: 0%;
-    // transition: right 1.333s cubic-bezier(1, 0, 0, 1);
-  }
-  // @include md {
-  //   width: 88%;
+  // &.animate {
+  //   right: 0%;
   // }
   @include lg {
-    right: -62%;
     width: 62%;
+    transform: translateX(0%);
   }
   @include xl {
-    right: -50%;
+    // right: 0%;
     width: 50%;
+    transform: translateX(0%);
   }
 }
 
-.msg1 h1 {
-  font-size: $h1;
+.shape-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 50%;
+  // overflow: hidden;
 }
 
-.animate {
-  h2 {
-    // transform: translateY(0px);
-    opacity: 1;
-    transition: opacity 1.666s ease-out;
-    transition-delay: 0.666s;
-  }
+.shape-t {
+  position: absolute;
+  width: 62%;
+  display: block;
+  margin: 0 19%;
+  stroke: rgba($brand, 0.66);
+  stroke-width: 2px;
+  fill: none;
+  // transform: rotate(-111deg);
+  // padding: 20px;
 }
 
 h2 {
-  opacity: 0;
+  opacity: 1;
   width: 62%;
+  margin: 0 0 0 60px;
   position: absolute;
   @include fp(font-size, 15, 20);
-  // font-weight: 400;
-  margin-bottom: 34px;
-  top: 15%;
-  transform: translateY(-15%);
+  top: 40%;
+  transform: translateY(-40%);
   transition: all 0.222s ease-out;
+  span {
+    display: inline-block;
+  }
 }
 
 p {
   @include fp(font-size, 14, 17);
   color: $brand-alt;
 }
-.wrapper {
-  display: flex;
-  p {
-    // @include fp(font-size, 16, 22);
-    // color: $brand;
-  }
-}
+// .wrapper {
+//   display: flex;
+//   p {
+//     // @include fp(font-size, 16, 22);
+//     // color: $brand;
+//   }
+// }
 
-.left {
-  flex: 0 0 50%;
-  // margin-right: 7%;
-}
+// .left {
+//   flex: 0 0 50%;
+//   // margin-right: 7%;
+// }
 
-.right {
-  flex: 1;
-}
+// .right {
+//   flex: 1;
+// }
 </style>

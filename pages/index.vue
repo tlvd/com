@@ -1,16 +1,15 @@
 <template>
-  <div class="outer">
+  <div class="container">
     <app-toggle-button
-      :show-content="showContent"
-    />
-
-    <!-- Background Area -->
-    <app-stage
       :show-content="showContent"
     />
 
     <!-- Content Area -->
     <app-content
+      :show-content="showContent"
+    />
+    <!-- Background Area -->
+    <app-stage
       :show-content="showContent"
     />
   </div>
@@ -45,7 +44,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.outer {
+.container {
   position: absolute;
   width: 100%;
   height: 100%;
