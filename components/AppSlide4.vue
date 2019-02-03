@@ -1,16 +1,21 @@
 <template
-  id="slide4"
   v-if="currentSlide='slide4'"
+  id="slide4"
 >
   <app-slide-base
     class="slide4"
   >
     <template slot="header">
-      <h2>For project related inquiries, please reach out to our <span @click="changeSlide">business agent</span>.</h2>
+      <h2>
+        For project related inquiries, please reach out to our 
+        <span>
+          business agent
+        </span>.
+      </h2>
     </template>
 
     <template slot="shape">
-      <shape-t />
+      <shape-t @click.native="changeSlide" />
     </template>
   </app-slide-base>
 </template>

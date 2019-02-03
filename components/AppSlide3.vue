@@ -3,11 +3,16 @@
     class="slide3"
   >
     <template slot="header">
-      <h2>Each year, Tel Aviv Digital accepts a limited number of projects with progressive clients who understand the value of <span @click="changeSlide">design and aesthetics.</span></h2>
+      <h2>
+        Each year, Tel Aviv Digital accepts a limited number of projects with progressive clients who understand the value of 
+        <span>
+          design and aesthetics.
+        </span>
+      </h2>
     </template>
 
     <template slot="shape">
-      <shape-t />
+      <shape-t @click.native="changeSlide" />
     </template>
   </app-slide-base>
 </template>

@@ -12,6 +12,7 @@
       </transition>
 
       <app-slides />
+
       <!-- <h2> -->
       <!-- Tel Aviv Digital is a creative communications agency, which specializes in developing branded advertising and interactive experiences. -->
       <!-- </h2> -->
@@ -24,7 +25,7 @@
       <!-- <p class="right"> -->
       <!-- For project related inquiries, please reach out to our business agent. -->
       <!-- </p> -->
-      </div>
+      <!-- </div> -->
     </section>
   </transition>
 </template>
@@ -32,6 +33,7 @@
 <script>
 import AppTitle from '~/components/AppTitle'
 import AppSlides from '~/components/AppSlides'
+
 export default {
   components: {
     AppTitle,
