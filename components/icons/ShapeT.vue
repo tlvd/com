@@ -13,6 +13,17 @@
 </template>
 
 <style scoped lang="scss">
+.shape-t {
+  position: absolute;
+  width: 62%;
+  display: block;
+  margin: 0 19%;
+  stroke: rgba($brand, 0.66);
+  stroke-width: 2px;
+  fill: none;
+  transform: rotate(-111deg);
+  // padding: 20px;
+}
 // svg {
 //   cursor: pointer;
 // }

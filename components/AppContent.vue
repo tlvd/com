@@ -56,14 +56,11 @@ export default {
   transform: translateX(0%);
   width: 100%;
   height: 100%;
-  // z-index: 5;
   @include lg {
     width: 62%;
-    transform: translateX(0%);
   }
   @include xl {
     width: 50%;
-    transform: translateX(0%);
   }
 }
 // .content {

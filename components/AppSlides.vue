@@ -1,85 +1,49 @@
 <template>
-  <div>
-    <app-slide-base
-      v-show="slide1"
-      class="slide1">
-      <template slot="header">
-        <h2>Our goal is to get the world talking, staring, interacting and most importantly, remembering <span @click="updateSlide">your brand</span></h2>
-      </template>
-
-      <template slot="shape">
-        <shape-t />
-      </template>
-    </app-slide-base>
-    
-    <app-slide-base
-      v-show="slide2"
-      class="slide2"
-    >
-      <template slot="header">
-        <h2>Tel Aviv Digital is a creative communications agency, which specializes in developing branded advertising and interactive experiences.</h2>
-      </template>
-
-      <template slot="shape">
-        <shape-t />
-      </template>
-    </app-slide-base>
-
-    <app-slide-base
-      v-show="slide3"
-      class="slide3"
-    >
-      <template slot="header">
-        <h2>Each year, Tel Aviv Digital accepts a limited number of projects with progressive clients who understand the value of design and aesthetics.</h2>
-      </template>
-
-      <template slot="shape">
-        <shape-t />
-      </template>
-    </app-slide-base>
-
-    <app-slide-base
-      v-if="slide4"
-      class="slide4"
-    >
-      <template slot="header">
-        <h2>For project related inquiries, please reach out to our business agent.</h2>
-      </template>
-
-      <template slot="shape">
-        <shape-t />
-      </template>
-    </app-slide-base>
-  </div>
+  <transition name="slide" mode="in-out" appear>
+    <component :is="currentSlide" />
+  </transition>
 </template>
 
 <script>
 import AppSlideBase from '~/components/AppSlideBase'
+import AppSlide1 from '~/components/AppSlide1'
+import AppSlide2 from '~/components/AppSlide2'
+import AppSlide3 from '~/components/AppSlide3'
+import AppSlide4 from '~/components/AppSlide4'
 import ShapeT from '~/components/icons/ShapeT'
 
 export default {
   components: {
     AppSlideBase,
-    ShapeT
-  },
-  props: {
-    showContent: {
-      type: Boolean,
-      default: false
-    }
+    ShapeT,
+    AppSlide1,
+    AppSlide2,
+    AppSlide3,
+    AppSlide4
   },
   data() {
     return {
-      slide1: true,
-      slide2: false,
-      slide3: false,
-      slide4: false
+      slide1: 'AppSlide1',
+      slide2: 'AppSlide2',
+      slide3: 'AppSlide3',
+      slide4: 'AppSlide4',
+      currentSlide: 'AppSlide1'
     }
   },
+  created() {
+    this.$root.$on('change-slide', this.updateSlide)
+  },
   methods: {
-    updateSlide(e) {
-      this.slide1 = false
-      this.slide2 = true
+    updateSlide() {
+      if (this.currentSlide === this.slide1) {
+        this.currentSlide = this.slide2
+      } else if (this.currentSlide === this.slide2) {
+        this.currentSlide = this.slide3
+      } else if (this.currentSlide === this.slide3) {
+        this.currentSlide = this.slide4
+      } else {
+        this.currentSlide = this.slide1
+      }
     }
   }
 }
@@ -92,18 +56,6 @@ export default {
   height: 100%;
   padding-bottom: 50%;
   // overflow: hidden;
-}
-
-.shape-t {
-  position: absolute;
-  width: 62%;
-  display: block;
-  margin: 0 19%;
-  stroke: rgba($brand, 0.66);
-  stroke-width: 2px;
-  fill: none;
-  transform: rotate(-111deg);
-  // padding: 20px;
 }
 
 h2 {
@@ -119,6 +71,7 @@ h2 {
     // position: absolute;
     display: inline-block;
     cursor: pointer;
+    color: blue;
   }
 }
 </style>
