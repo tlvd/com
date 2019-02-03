@@ -44,7 +44,7 @@ export default {
 
 .logo {
   position: absolute;
-  // z-index: 20;
+  z-index: -1;
   fill: $black;
   width: 172px;
   // height: 172px * 0.21511628;

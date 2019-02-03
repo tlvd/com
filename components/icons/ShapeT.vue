@@ -1,6 +1,6 @@
 <template>
   <svg
-    class="shape-t"
+    class="shape shape-t"
     width="100%"
     height="100%"
     viewBox="0 0 512 512"
@@ -11,3 +11,9 @@
     </g>
   </svg>
 </template>
+
+<style scoped lang="scss">
+// svg {
+//   cursor: pointer;
+// }
+</style>

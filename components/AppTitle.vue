@@ -22,6 +22,7 @@ export default {
   width: 72%;
   top: 10%;
   transform: translateY(-10%);
+  z-index: 33;
 }
 
 h1 {

@@ -3,15 +3,14 @@
     <app-toggle-button
       :show-content="showContent"
     />
-
+    <app-stage
+      :show-content="showContent"
+    />
     <!-- Content Area -->
     <app-content
       :show-content="showContent"
     />
     <!-- Background Area -->
-    <app-stage
-      :show-content="showContent"
-    />
   </div>
 </template>
 

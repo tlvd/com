@@ -2,53 +2,28 @@
   <transition name="showContent" mode="out-in">
     <section
       v-if="showContent"
-      class="content"
+      class="fs content"
     >
-      <!-- <transition name="fade" mode="out-in" appear> -->
-      <!-- <div -->
-      <!-- v-if="circle" -->
-      <!-- class="circle-line" -->
-      <!-- /> -->
-      <!-- </transition> -->
-
-      <transition name="fadeShape" mode="out-in" appear>
-        <div
-          v-if="circle"
-          class="shape-container"
-        >
-          <shape-t />
-        </div>
-      </transition>
-
-      <!-- <transition name="fade" mode="out-in" appear> -->
-      <!-- <div class="triangle-line" /> -->
-      <!-- </transition> -->
-
       <transition name="fadeSlower" mode="out-in" appear>
         <app-title
-          v-if="tlvd"
+          v-if="showContent"
           title="Tel Aviv Digital"
         />
       </transition>
 
-      <transition name="fade" mode="out-in" appear>
-        <h2 v-if="slide1">
-          Our goal is to get the world talking, staring, interacting and most importantly, remembering <span>your brand</span>.
-        </h2>
-      </transition>
+      <app-slides />
+      <!-- <h2> -->
+      <!-- Tel Aviv Digital is a creative communications agency, which specializes in developing branded advertising and interactive experiences. -->
+      <!-- </h2> -->
 
-      <h2>
-        <!-- Tel Aviv Digital is a creative communications agency, which specializes in developing branded advertising and interactive experiences. -->
-      </h2>
+      <!-- <div class="wrapper"> -->
+      <!-- <p class="left"> -->
+      <!-- Each year, Tel Aviv Digital accepts a limited number of projects with progressive clients who understand the value of design and aesthetics.  -->
+      <!-- </p> -->
 
-      <div class="wrapper">
-        <p class="left">
-          <!-- Each year, Tel Aviv Digital accepts a limited number of projects with progressive clients who understand the value of design and aesthetics.  -->
-        </p>
-
-        <p class="right">
-          <!-- For project related inquiries, please reach out to our business agent. -->
-        </p>
+      <!-- <p class="right"> -->
+      <!-- For project related inquiries, please reach out to our business agent. -->
+      <!-- </p> -->
       </div>
     </section>
   </transition>
@@ -56,12 +31,11 @@
 
 <script>
 import AppTitle from '~/components/AppTitle'
-import ShapeT from '~/components/icons/ShapeT'
-
+import AppSlides from '~/components/AppSlides'
 export default {
   components: {
     AppTitle,
-    ShapeT
+    AppSlides
   },
   props: {
     showContent: {
@@ -70,86 +44,37 @@ export default {
     }
   },
   data() {
-    return {
-      tlvd: false,
-      slide1: false,
-      slide2: false,
-      slide3: false,
-      circle: false
-    }
-  },
-  mounted() {
-    this.circle = true
-    this.slide1 = true
-    this.tlvd = true
-    // setTimeout(() => (this.init = false), 6800)
+    return {}
   }
 }
 </script>
 
-<style scoped lang="scss">
-.content {
+<style lang="scss">
+.fs {
   right: 0;
   position: absolute;
   transform: translateX(0%);
   width: 100%;
   height: 100%;
-  background: $black;
-  background: $red;
-  // padding: 100px 6%;
-  z-index: 5;
-  // &.animate {
-  //   right: 0%;
-  // }
+  // z-index: 5;
   @include lg {
     width: 62%;
     transform: translateX(0%);
   }
   @include xl {
-    // right: 0%;
     width: 50%;
     transform: translateX(0%);
   }
 }
+// .content {
+//   background: $black;
+//   background: $red;
+// }
 
-.shape-container {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  padding-bottom: 50%;
-  // overflow: hidden;
-}
-
-.shape-t {
-  position: absolute;
-  width: 62%;
-  display: block;
-  margin: 0 19%;
-  stroke: rgba($brand, 0.66);
-  stroke-width: 2px;
-  fill: none;
-  // transform: rotate(-111deg);
-  // padding: 20px;
-}
-
-h2 {
-  opacity: 1;
-  width: 62%;
-  margin: 0 0 0 60px;
-  position: absolute;
-  @include fp(font-size, 15, 20);
-  top: 40%;
-  transform: translateY(-40%);
-  transition: all 0.222s ease-out;
-  span {
-    display: inline-block;
-  }
-}
-
-p {
-  @include fp(font-size, 14, 17);
-  color: $brand-alt;
-}
+// p {
+//   @include fp(font-size, 14, 17);
+//   color: $brand-alt;
+// }
 // .wrapper {
 //   display: flex;
 //   p {
