@@ -14,8 +14,8 @@
         </transition>
         <span>
           <a href="mailto:hello@tlvd.com">
-            design agent
-          </a>.
+            design agent &#8617;
+          </a>
         </span>
       </h2>
     </template>
