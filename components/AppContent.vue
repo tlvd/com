@@ -33,7 +33,7 @@
 
 <script>
 import AppTitle from '~/components/AppTitle'
-import AppSlides from '~/components/AppSlides'
+import AppSlides from '~/components/slides/AppSlides'
 
 export default {
   components: {

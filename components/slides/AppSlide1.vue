@@ -22,9 +22,9 @@
 </template>
 
 <script>
-import AppSlideBase from '~/components/AppSlideBase'
+import AppSlideBase from '~/components/slides/AppSlideBase'
 // import IconArrow from '~/components/icons/IconArrow'
-import ShapeD from '~/components/icons/ShapeD'
+import ShapeD from '~/components/shapes/ShapeD'
 
 export default {
   components: {

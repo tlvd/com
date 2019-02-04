@@ -5,12 +5,12 @@
 </template>
 
 <script>
-import AppSlideBase from '~/components/AppSlideBase'
+import AppSlideBase from '~/components/slides/AppSlideBase'
 // import IconArrow from '~/components/icons/IconArrow'
-import AppSlide1 from '~/components/AppSlide1'
-import AppSlide2 from '~/components/AppSlide2'
-import AppSlide3 from '~/components/AppSlide3'
-import AppSlide4 from '~/components/AppSlide4'
+import AppSlide1 from '~/components/slides/AppSlide1'
+import AppSlide2 from '~/components/slides/AppSlide2'
+import AppSlide3 from '~/components/slides/AppSlide3'
+import AppSlide4 from '~/components/slides/AppSlide4'
 
 export default {
   components: {

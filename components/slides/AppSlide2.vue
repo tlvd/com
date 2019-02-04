@@ -1,34 +1,32 @@
-<template id="slide3">
-  <app-slide-base
-    class="slide3"
-  >
+<template id="slide2">
+  <app-slide-base class="slide2">
     <template slot="header">
       <h2>
         <transition name="dissolve" mode="out-in" appear>
           <span>
-            Each year, Tel Aviv Digital accepts a limited number of projects with progressive clients who understand the value of 
+            Tel Aviv Digital is a creative communications agency, which specializes in developing branded advertising and 
           </span>
         </transition>
         <span @click="changeSlide">
-          design and aesthetics.
+          interactive experiences.
         </span>
       </h2>
     </template>
 
     <template slot="shape">
-      <shape-t />
+      <shape-v />
     </template>
   </app-slide-base>
 </template>
 
 <script>
-import AppSlideBase from '~/components/AppSlideBase'
-import ShapeT from '~/components/icons/ShapeT'
+import AppSlideBase from '~/components/slides/AppSlideBase'
+import ShapeV from '~/components/shapes/ShapeV'
 
 export default {
   components: {
     AppSlideBase,
-    ShapeT
+    ShapeV
   },
   methods: {
     changeSlide() {
@@ -38,5 +36,5 @@ export default {
 }
 </script>
 
-<style scoped ang="scss">
+<style scoped lang="scss">
 </style>

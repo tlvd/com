@@ -21,7 +21,7 @@ module.exports = {
       { property: 'og:title', content: 'tlvd.com'},
       { property: 'og:url', content: 'https://tlvd.com'},
       // { property: 'og:image', content: 'https://tlvd.com/images/tlvd-poster-fbk.jpg'},
-      { property: 'og:description', content: 'Tel Aviv Digital aka TLVD #tlvd'},
+      { property: 'og:description', content: 'Tel Aviv Digital aka TLVD #tlvd #telavivdigital'},
       { name: 'twitter:card', content: 'summary_large_image'},
       { name: 'twitter:site', content: '@tlvd'},
       { name: 'twitter:title', content: 'tlvd.com'},
@@ -65,7 +65,8 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    '@nuxtjs/pwa'
   ],
   styleResources: {
      // your settings here

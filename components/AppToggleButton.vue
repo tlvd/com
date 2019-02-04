@@ -47,6 +47,7 @@ export default {
   overflow: hidden;
   // transition: right 0.666s cubic-bezier(0.62, 0.03, 0.11, 0.96);
   svg {
+    fill: $brand;
     position: absolute;
     top: 12px;
     transition: right 0.666s cubic-bezier(0.62, 0.03, 0.11, 0.96);

@@ -19,7 +19,7 @@ svg {
   margin-bottom: -3px;
   margin-left: 13px;
   g {
-    fill: $brand;
+    // fill: none;
   }
 }
 </style>

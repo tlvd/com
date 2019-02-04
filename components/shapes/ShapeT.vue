@@ -1,24 +1,24 @@
 <template>
   <svg
-    class="shape shape-d"
+    class="shape shape-t"
     width="100%"
     height="100%"
     viewBox="0 0 512 512"
     xmlns="http://www.w3.org/2000/svg"
   >
     <g>
-      <circle cx="256" cy="256" r="250" />
+      <rect x="6.5" y="6.5" width="499" height="499" />
     </g>
   </svg>
 </template>
 
 <style scoped lang="scss">
-.shape-d {
+.shape-t {
   position: absolute;
   width: 62%;
   display: block;
   margin: 0 19%;
-  stroke: rgba($brand, 0.33);
+  stroke: rgba($background-alt, 0.33);
   stroke-width: 2px;
   fill: none;
 }

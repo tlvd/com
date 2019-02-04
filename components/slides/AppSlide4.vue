@@ -12,8 +12,8 @@
             For project related inquiries, please reach out to our 
           </span>
         </transition>
-        <span @click="changeSlide">
-          Design Agent.
+        <span>
+          <a href="mailto:hello@tlvd.com">design agent</a>.
         </span>
       </h2>
     </template>
@@ -25,8 +25,8 @@
 </template>
 
 <script>
-import AppSlideBase from '~/components/AppSlideBase'
-import ShapeL from '~/components/icons/ShapeL'
+import AppSlideBase from '~/components/slides/AppSlideBase'
+import ShapeL from '~/components/shapes/ShapeL'
 
 export default {
   components: {
@@ -48,6 +48,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
+a {
+  color: $red;
+}
 span:nth-child(2) {
   color: $black;
 }
