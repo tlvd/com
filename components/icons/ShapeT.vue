@@ -18,10 +18,10 @@
   width: 62%;
   display: block;
   margin: 0 19%;
-  stroke: rgba($brand, 0.66);
+  stroke: rgba($brand, 0.33);
   stroke-width: 2px;
   fill: none;
-  transform: rotate(-111deg);
+  transform: rotate(-90deg);
   // padding: 20px;
 }
 // svg {

@@ -29,7 +29,10 @@ h1 {
   // max-width: 88%;
   font-weight: 400;
   @include fp(font-size, 20, 26);
-  margin: 0 0 0 60px;
+  margin: 0 0 0 40px;
+  @include md {
+    margin: 0 0 0 60px;
+  }
 }
 
 span {

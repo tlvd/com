@@ -7,15 +7,19 @@
   >
     <template slot="header">
       <h2>
-        For project related inquiries, please reach out to our 
-        <span>
-          business agent
-        </span>.
+        <transition name="dissolve" mode="out-in" appear>
+          <span>
+            For project related inquiries, please reach out to our 
+          </span>
+        </transition>
+        <span @click="changeSlide">
+          Design Agent.
+        </span>
       </h2>
     </template>
 
     <template slot="shape">
-      <shape-t @click.native="changeSlide" />
+      <shape-t />
     </template>
   </app-slide-base>
 </template>
@@ -37,5 +41,8 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
+span:nth-child(2) {
+  color: $black;
+}
 </style>

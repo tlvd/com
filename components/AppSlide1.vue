@@ -4,14 +4,19 @@
   >
     <template slot="header">
       <h2>
-        Our goal is to get the world talking, staring, interacting and most importantly, remembering <span>
-          your brand
+        <transition name="dissolve" mode="out-in" appear>
+          <span>
+            Our goal is to get the world talking, staring, interacting and most importantly, 
+          </span>
+        </transition>
+        <span @click="changeSlide">
+          remembering your brand.
         </span>
       </h2>
     </template>
 
     <template slot="shape">
-      <shape-t @click.native="changeSlide" />
+      <shape-t />
     </template>
   </app-slide-base>
 </template>
@@ -35,5 +40,8 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
+h2 {
+  font-weight: 700;
+}
 </style>

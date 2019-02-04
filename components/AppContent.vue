@@ -52,12 +52,13 @@ export default {
 </script>
 
 <style lang="scss">
-.fs {
+.content {
   right: 0;
   position: absolute;
   transform: translateX(0%);
   width: 100%;
   height: 100%;
+  z-index: 3;
   @include lg {
     width: 62%;
   }

@@ -8,11 +8,11 @@
 //
 
 .fadeShape-enter-active {
-  @include animation(animateShape, 12s, 0s, linear, 1, forwards, forwards);
+  @include animation(animateShape, 33s, 0s, ease-out, 1, forwards, forwards);
   opacity: 1;
 }
 .fadeShape-leave-active {
-  @include animation(animateShape, 0.222s, 0s, linear, 1, backwards, hidden);
+  @include animation(animateShape, 0.222s, 0s, ease-in-out, 1, backwards, hidden);
   opacity: 1;
 }
 .fadeShape-enter,
@@ -44,12 +44,29 @@
 .fadeSlower-leave-active {
   opacity: 1;
   transition: opacity 3.666s cubic-bezier(0.62, 0.03, 0.11, 0.96);
-  transition-delay: 1.666s;
+  transition-delay: 3.333s;
   // right: 0%;
   // width: 100%;
 }
 .fadeSlower-enter,
 .fadeSlower-leave-to {
+  opacity: 0;
+}
+
+//////////////////////////////////////////////////////////
+// dissolve
+//
+
+.dissolve-enter-active,
+.dissolve-leave-active {
+  opacity: 1;
+  transition: opacity 9.666s cubic-bezier(0.62, 0.03, 0.11, 0.96);
+  transition-delay: 3.333s;
+  // right: 0%;
+  // width: 100%;
+}
+.dissolve-enter,
+.dissolve-leave-to {
   opacity: 0;
 }
 
@@ -122,7 +139,7 @@
     stroke-dasharray: 1620;
     stroke-dashoffset: 1620;
   }
-  30% {
+  10% {
     opacity: 1;
   }
   100% {

@@ -42,7 +42,7 @@ export default {
   z-index: 6;
 }
 .slide3 {
-  background: $brand-alt;
+  background: $background-alt;
   z-index: 7;
 }
 .slide4 {

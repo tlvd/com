@@ -1,19 +1,20 @@
 <template id="slide2">
-  <app-slide-base
-    class="slide2"
-  >
+  <app-slide-base class="slide2">
     <template slot="header">
       <h2>
-        Tel Aviv Digital is a
-        <span>
-          creative communications 
+        <transition name="dissolve" mode="out-in" appear>
+          <span>
+            Tel Aviv Digital is a creative communications agency, which specializes in developing branded advertising and 
+          </span>
+        </transition>
+        <span @click="changeSlide">
+          interactive experiences.
         </span>
-        agency, which specializes in developing branded advertising and interactive experiences.
       </h2>
     </template>
 
     <template slot="shape">
-      <shape-t @click.native="changeSlide" />
+      <shape-t />
     </template>
   </app-slide-base>
 </template>
@@ -35,5 +36,5 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 </style>

@@ -4,15 +4,19 @@
   >
     <template slot="header">
       <h2>
-        Each year, Tel Aviv Digital accepts a limited number of projects with progressive clients who understand the value of 
-        <span>
+        <transition name="dissolve" mode="out-in" appear>
+          <span>
+            Each year, Tel Aviv Digital accepts a limited number of projects with progressive clients who understand the value of 
+          </span>
+        </transition>
+        <span @click="changeSlide">
           design and aesthetics.
         </span>
       </h2>
     </template>
 
     <template slot="shape">
-      <shape-t @click.native="changeSlide" />
+      <shape-t />
     </template>
   </app-slide-base>
 </template>
@@ -34,5 +38,5 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped ang="scss">
 </style>

@@ -1,0 +1,28 @@
+///////////////////////////////////////////////
+///////////////////////////////////////////////
+// Typography
+//
+
+///////////////////////////////////////////////
+// Slide content H2
+//
+
+h2 {
+  opacity: 1;
+  width: 72%;
+  margin: 0 0 0 40px;
+  position: absolute;
+  @include fp(font-size, 14, 20);
+  // font-weight: 400;
+  top: 40%;
+  transform: translateY(-40%);
+  transition: all 0.222s ease-out;
+  z-index: 1;
+  span:nth-child(2) {
+    cursor: pointer;
+  }
+  @include md {
+    width: 62%;
+    margin: 0 0 0 60px;
+  }
+}

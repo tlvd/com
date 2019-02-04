@@ -1,16 +1,12 @@
 <template>
   <transition name="slide" mode="in-out" appear>
     <component :is="currentSlide" />
-    <icon-arrow
-      class="next-arrow"
-      @click.native="changeSlide"
-    />
   </transition>
 </template>
 
 <script>
 import AppSlideBase from '~/components/AppSlideBase'
-import IconArrow from '~/components/icons/IconArrow'
+// import IconArrow from '~/components/icons/IconArrow'
 import AppSlide1 from '~/components/AppSlide1'
 import AppSlide2 from '~/components/AppSlide2'
 import AppSlide3 from '~/components/AppSlide3'
@@ -19,7 +15,7 @@ import AppSlide4 from '~/components/AppSlide4'
 export default {
   components: {
     AppSlideBase,
-    IconArrow,
+    // IconArrow,
     AppSlide1,
     AppSlide2,
     AppSlide3,
@@ -53,7 +49,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 .shape-container {
   position: absolute;
   width: 100%;
@@ -61,24 +57,5 @@ export default {
   padding-bottom: 50%;
   cursor: pointer;
   z-index: 2;
-  // overflow: hidden;
-}
-
-h2 {
-  opacity: 1;
-  width: 62%;
-  margin: 0 0 0 60px;
-  position: absolute;
-  @include fp(font-size, 15, 20);
-  top: 40%;
-  transform: translateY(-40%);
-  transition: all 0.222s ease-out;
-  z-index: 1;
-  span {
-    // position: absolute;
-    display: inline-block;
-    // cursor: pointer;
-    // color: $red;
-  }
 }
 </style>
