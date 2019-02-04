@@ -46,7 +46,7 @@ export default {
   z-index: 7;
 }
 .slide4 {
-  background: $white;
+  background: #ffe8ba;
   z-index: 8;
 }
 

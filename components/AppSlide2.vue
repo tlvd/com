@@ -14,19 +14,19 @@
     </template>
 
     <template slot="shape">
-      <shape-t />
+      <shape-v />
     </template>
   </app-slide-base>
 </template>
 
 <script>
 import AppSlideBase from '~/components/AppSlideBase'
-import ShapeT from '~/components/icons/ShapeT'
+import ShapeV from '~/components/icons/ShapeV'
 
 export default {
   components: {
     AppSlideBase,
-    ShapeT
+    ShapeV
   },
   methods: {
     changeSlide() {

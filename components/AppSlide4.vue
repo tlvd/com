@@ -19,19 +19,25 @@
     </template>
 
     <template slot="shape">
-      <shape-t />
+      <shape-l />
     </template>
   </app-slide-base>
 </template>
 
 <script>
 import AppSlideBase from '~/components/AppSlideBase'
-import ShapeT from '~/components/icons/ShapeT'
+import ShapeL from '~/components/icons/ShapeL'
 
 export default {
   components: {
     AppSlideBase,
-    ShapeT
+    ShapeL
+  },
+  mounted() {
+    this.$root.$emit('update-colors')
+  },
+  destroyed() {
+    this.$root.$emit('update-colors')
   },
   methods: {
     changeSlide() {

@@ -2,6 +2,7 @@
   <transition name="showContent" mode="out-in">
     <section
       v-if="showContent"
+      :class="{invert: dayTime}"
       class="fs content"
     >
       <transition name="fadeSlower" mode="out-in" appear>
@@ -46,7 +47,17 @@ export default {
     }
   },
   data() {
-    return {}
+    return {
+      dayTime: false
+    }
+  },
+  created() {
+    this.$root.$on('update-colors', this.updateColors)
+  },
+  methods: {
+    updateColors() {
+      this.dayTime = !this.dayTime
+    }
   }
 }
 </script>

@@ -16,7 +16,7 @@ h2 {
   // font-weight: 400;
   top: 40%;
   transform: translateY(-40%);
-  transition: all 0.222s ease-out;
+  transition: color 2s ease;
   z-index: 1;
   span:nth-child(2) {
     cursor: pointer;
@@ -24,5 +24,11 @@ h2 {
   @include md {
     width: 62%;
     margin: 0 0 0 60px;
+  }
+}
+
+.invert {
+  h2 {
+    color: $black;
   }
 }

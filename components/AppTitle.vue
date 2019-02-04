@@ -28,11 +28,16 @@ export default {
 h1 {
   // max-width: 88%;
   font-weight: 400;
+  transition: color 2s ease;
   @include fp(font-size, 20, 26);
   margin: 0 0 0 40px;
   @include md {
     margin: 0 0 0 60px;
   }
+}
+
+.invert h1 {
+  color: $black;
 }
 
 span {

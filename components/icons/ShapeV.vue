@@ -1,19 +1,19 @@
 <template>
   <svg
-    class="shape shape-t"
+    class="shape shape-v"
     width="100%"
     height="100%"
     viewBox="0 0 512 512"
     xmlns="http://www.w3.org/2000/svg"
   >
     <g>
-      <rect x="6.5" y="6.5" width="499" height="499" />
+      <polygon transform="translate(256.000000, 255.506351) scale(1, -1) rotate(360.000000) translate(-256.000000, -255.506351) " points="506 472.012702 6 472.012702 256 39" />
     </g>
   </svg>
 </template>
 
 <style scoped lang="scss">
-.shape-t {
+.shape-v {
   position: absolute;
   width: 62%;
   display: block;
@@ -21,6 +21,5 @@
   stroke: rgba($brand, 0.33);
   stroke-width: 2px;
   fill: none;
-  transform: rotate(-90deg);
 }
 </style>

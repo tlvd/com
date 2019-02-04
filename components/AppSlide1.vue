@@ -16,7 +16,7 @@
     </template>
 
     <template slot="shape">
-      <shape-t />
+      <shape-d />
     </template>
   </app-slide-base>
 </template>
@@ -24,13 +24,13 @@
 <script>
 import AppSlideBase from '~/components/AppSlideBase'
 // import IconArrow from '~/components/icons/IconArrow'
-import ShapeT from '~/components/icons/ShapeT'
+import ShapeD from '~/components/icons/ShapeD'
 
 export default {
   components: {
     AppSlideBase,
     // IconArrow,
-    ShapeT
+    ShapeD
   },
   methods: {
     changeSlide() {
