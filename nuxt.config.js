@@ -65,8 +65,8 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
-    '@nuxtjs/style-resources',
-    '@nuxtjs/pwa'
+    '@nuxtjs/style-resources'
+    // '@nuxtjs/pwa'
   ],
   styleResources: {
      // your settings here
