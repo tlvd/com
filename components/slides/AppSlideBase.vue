@@ -8,7 +8,7 @@
     <transition name="fade" mode="out-in" appear>
       <slot name="header" />
     </transition>
-    <transition name="fadeShape" mode="out-in" appear>
+    <transition name="fadeSlower" mode="out-in" appear>
       <icon-arrow
         class="next-arrow"
         @click.native="changeSlide"
@@ -55,6 +55,7 @@ export default {
   background: $accent;
   z-index: 8;
   .next-arrow {
+    transition: all 2s ease;
     transform: rotate(0);
   }
 }
@@ -65,7 +66,7 @@ export default {
   left: 48px;
   fill: $brand;
   transform: rotate(180deg);
-  transition: all 2s ease;
+  // transition: all 2s ease;
   // z-index: 1000;
   cursor: pointer;
 }

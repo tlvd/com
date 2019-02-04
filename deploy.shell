@@ -11,4 +11,4 @@ npm run generate
 # commit
 git add -A
 git commit -m 'Deploy'
-# git push -f
+git push -f
