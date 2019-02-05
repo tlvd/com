@@ -20,7 +20,7 @@ module.exports = {
       { name: 'application-name', content: 'tlvd.com' },
       { property: 'og:title', content: 'tlvd.com'},
       { property: 'og:url', content: 'https://tlvd.com'},
-      // { property: 'og:image', content: 'https://tlvd.com/images/tlvd-poster-fbk.jpg'},
+      { property: 'og:image', content: 'https://tlvd.com/images/tlvd-poster-fbk.jpg'},
       { property: 'og:description', content: 'Tel Aviv Digital aka TLVD #tlvd #telavivdigital'},
       { name: 'twitter:card', content: 'summary_large_image'},
       { name: 'twitter:site', content: '@tlvd'},
@@ -38,7 +38,7 @@ module.exports = {
       { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
       { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
       { rel: 'manifest', href: '/site.webmanifest' },
-      { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#5b4cff' },
+      { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#ff2626' },
       // { rel: 'preload', href: '/audio/fart-1.mp3', as: 'audio' }
       // { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:100,300,400,500,700' }
     ]
