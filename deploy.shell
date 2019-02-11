@@ -8,7 +8,11 @@ set -e
 # build
 npm run generate
 
-# commit
+# add
 git add -A
+
+#commit
 git commit -m 'Deploy'
+
+#push
 git push -f
