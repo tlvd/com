@@ -78,9 +78,9 @@ module.exports = {
   /*
   ** Generate configuration
   */
-  generate: {
-    dir: 'docs'
-  },
+  // generate: {
+  //   dir: 'docs'
+  // },
 
   /*
   ** Build configuration
